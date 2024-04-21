@@ -1,0 +1,140 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+.open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-light {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+.navbar {
+    background-color: white;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.navbar img {
+    width: 7rem;
+}
+
+.nav-item a {
+    color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s ease;
+}
+
+.nav-item a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    height: 40rem;
+    overflow: hidden;
+}
+
+.titulo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo h2 {
+    margin: 0;
+    padding: 0;
+    padding: 10rem;
+}
+
+
+section h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+section p {
+    line-height: 2;
+}
+
+#sobre_nosotros .card {
+    width: 30rem;
+}
+
+.list-inline {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#redes li {
+    color: black;
+}
+#redes a {
+    color: black;
+}
+
+.list-inline-item {
+
+    font-size: 6rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+
+.logo-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+footer img {
+    width: 5rem;
+    height: 6rem;
+}
