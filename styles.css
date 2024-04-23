@@ -83,6 +83,31 @@ section p {
     width: 30rem;
 }
 
+.carta {
+    position: relative; /* Añade posición relativa para que el pseudo-elemento pueda ser posicionado con respecto a este elemento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    padding: 10rem;
+    font-size: 3rem;
+}
+
+.carta::before {
+    content: ""; /* Añade contenido al pseudo-elemento */
+    position: absolute; /* Cambia la posición a absoluta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("test1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del div */
+}
+
+
 .list-inline {
     display: flex;
     justify-content: space-evenly;
