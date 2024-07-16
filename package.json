@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "firebase": "^10.12.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

@@ -1,0 +1,287 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@import 'animate.css';
+
+
+body {
+    background-color: white;
+    color: black;
+}
+
+/* FUENTES */
+
+.open-sans-light {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.open-sans-light {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+.navbar {
+    /* background-color: white; */
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.navbar img {
+    width: 7rem;
+}
+
+.nav-item a {
+    /* color: #000000; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0); */
+    transition: box-shadow 0.3s ease;
+}
+
+/*.nav-item a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+*/
+
+.collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    height: 40rem;
+    overflow: hidden;
+}
+
+.titulo {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo h2 {
+    margin: 0;
+    padding: 0;
+    padding: 10rem;
+}
+
+
+section h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+section p {
+    line-height: 2;
+}
+
+#sobre_nosotros .card {
+    width: 30rem;
+}
+
+.carta {
+    position: relative; /* Añade posición relativa para que el pseudo-elemento pueda ser posicionado con respecto a este elemento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+    padding: 10rem;
+    font-size: 3rem;
+}
+
+.carta::before {
+    content: ""; /* Añade contenido al pseudo-elemento */
+    position: absolute; /* Cambia la posición a absoluta */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("test1.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del div */
+}
+
+
+.list-inline {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#redes li {
+    color: black;
+}
+#redes a {
+    color: black;
+}
+
+.list-inline-item {
+
+    font-size: 6rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+
+.logo-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+footer img {
+    width: 5rem;
+    height: 6rem;
+}
+
+
+
+
+/*MODO OSCURO*/
+
+/* Estilos generales */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos de modo oscuro */
+body.dark-mode {
+    background-color: #000000;
+    color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+    background-color: #000000;
+    color: white;
+}
+
+.nav-link.dark-mode {
+    color: white;
+}
+
+.carta.dark-mode {
+    background-color: #000000;
+    color: #e0e0e0;
+}
+
+footer.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+button.dark-mode-toggle {
+    background-color: #e0e0e0;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.dark-mode-toggle:hover {
+    background-color: #d0d0d0;
+}
+
+
+
+
+
+
+
+.text-justify {
+    text-align: justify;
+}
