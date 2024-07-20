@@ -28,11 +28,19 @@
                 <a class="navbar-brand" href="#">
                     <img src="logoentornos.png" alt="Logo Entornos">
                 </a>
-                <button class="navbar-toggler" type="button">
+        
+                <div class="d-lg-none mx-auto">
+                    <button class="btn btn-primary dark-mode-toggle" id="darkModeButton" title="Modo nocturno">
+                        <i class="fas fa-moon" id="darkModeToggle"></i>
+                    </button>
+                </div>
+        
+                <button class="navbar-toggler order-lg-3 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+        
+                <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="#sobre_nosotros">Sobre nosotros</a>
                         </li>
@@ -47,17 +55,13 @@
                         </li>
                     </ul>
                 </div>
-
-
-                <button class="btn btn-primary dark-mode-toggle" id="darkModeButton">
-                    <i class="fas fa-moon" id="darkModeToggle"></i>
-                </button>
-                
-
-
+                <div class="d-none d-lg-flex ms-auto order-lg-3">
+                    <button class="btn btn-primary dark-mode-toggle ml-auto" id="darkModeButton" title="Modo nocturno">
+                        <i class="fas fa-moon" id="darkModeToggle"></i>
+                    </button>
+                </div>
             </div>
-        </nav>
-        
+        </nav>   
     </header>
     <section class="main" id="main">
         <div class="container titulo">

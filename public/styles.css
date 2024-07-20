@@ -83,9 +83,9 @@ body {
   
 
 .navbar {
-    /* background-color: white; */
-    padding-left: 5rem;
-    padding-right: 5rem;
+    /* background-color: white; --Comentar */
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .navbar img {
@@ -93,15 +93,35 @@ body {
 }
 
 .nav-item a {
-    /* color: #000000; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0); */
+    /* color: #000000; --Comentar */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0); --Comentar */
     transition: box-shadow 0.3s ease;
+} 
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-/*.nav-item a:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+@media (max-width: 991px) {
+    .navbar-collapse {
+        text-align: left;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-*/
+
+
+
+
+
+
 
 .collapse {
     display: flex;
@@ -249,6 +269,16 @@ body.dark-mode {
     color: white;
 }
 
+/* Modo luminoso */
+.navbar-toggler-icon {
+    filter: invert(0); /* Color negro por defecto */
+}
+
+/* Modo oscuro */
+body.dark-mode .navbar-toggler-icon {
+    filter: invert(1); /* Cambia a blanco */
+}
+
 .nav-link.dark-mode {
     color: white;
 }
@@ -264,17 +294,43 @@ footer.dark-mode {
 }
 
 button.dark-mode-toggle {
-    background-color: #e0e0e0;
-    color: #121212;
-    border: none;
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    outline: none; /* Remove default focus outline */
+}
+
+button.dark-mode-toggle:focus {
+    box-shadow: none; /* Remove default focus box-shadow */
 }
 
 button.dark-mode-toggle:hover {
-    background-color: #d0d0d0;
+    background-color: rgb(235, 235, 235);
+    color: black;
+    border: 1px solid black;
 }
+
+/* To prevent blue flash on click */
+button.dark-mode-toggle:active {
+    background-color: black; /* Match the normal background color */
+    color: white; /* Match the normal text color */
+    /* border: 1px solid white; Match the normal border color */
+}
+
+
+
+
+
+
 
 
 
