@@ -204,9 +204,7 @@ section p {
     line-height: 2;
 }
 
-#sobre_nosotros .card {
-    width: 30rem;
-}
+
 
 .carta {
     position: relative; /* Añade posición relativa para que el pseudo-elemento pueda ser posicionado con respecto a este elemento */
