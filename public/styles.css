@@ -454,3 +454,30 @@ button.dark-mode-toggle.light-mode:hover {
     color: white;
     border: 1px solid white;
 }
+
+
+/* BARRA DE DESPLAZAMIENTO */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #333; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+
+/* Soporte de la barra de desplazamiento en Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #333;
+}
