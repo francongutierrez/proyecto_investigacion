@@ -7,12 +7,15 @@
 @import 'animate.css';
 
 
+/* BODY INICIAL - MODO LUMINOSO */
+
+
 body {
     background-color: white;
     color: black;
 }
 
-/* FUENTES */
+/* FUENTES Y TEXTO */
 
 .open-sans-light {
   font-family: "Open Sans", sans-serif;
@@ -80,7 +83,21 @@ body {
     font-weight: 900;
     font-style: italic;
   }
+
+
+.bold {
+    font-weight: bolder;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
   
+/* NAVBAR */
 
 .navbar {
     /* background-color: white; --Comentar */
@@ -119,7 +136,9 @@ body {
 
 
 
-
+.text-justify {
+    text-align: justify;
+}
 
 
 
@@ -128,22 +147,15 @@ body {
     justify-content: flex-end;
 }
 
-/* .carousel {
-    display: flex;
-    align-items: center;
-    width: 50rem;
-    height: 40rem;
-    overflow: hidden;
-} */
 
 
 .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30rem; /* Ajusta la altura del carrusel */
-    width: 100%; /* Ajusta el ancho del carrusel */
-    max-width: 90rem; /* Ajusta el máximo ancho según tus necesidades */
+    height: 30rem; 
+    width: 100%; 
+    max-width: 90rem; 
     margin: 0 auto;
     position: relative;
 }
@@ -175,8 +187,25 @@ body {
 }
 
 
+.btn-primary {
+    background-color: #a04000;
+
+    color: white;
+    border: #000000;
+}
+
+.btn-primary:hover {
+    background-color: rgb(233, 74, 0);
+    color: white;
+}
 
 
+
+.logo-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -205,35 +234,10 @@ section p {
 }
 
 
-
-.carta {
-    position: relative; /* Añade posición relativa para que el pseudo-elemento pueda ser posicionado con respecto a este elemento */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px red solid;
-    padding: 10rem;
-    font-size: 3rem;
-}
-
-.carta::before {
-    content: ""; /* Añade contenido al pseudo-elemento */
-    position: absolute; /* Cambia la posición a absoluta */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("test1.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
-    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del div */
-}
-
 .card-img-top {
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-    height: 200px; /* Tamaño fijo para la altura de la imagen */
-    width: 100%; /* Ajusta el ancho al contenedor de la tarjeta */
+    object-fit: cover; 
+    height: 200px; 
+    width: 100%; 
 }
 
 
@@ -254,17 +258,14 @@ section p {
     font-size: 6rem;
 }
 
+/* FOOTER */
+
+
 footer {
-    background-color: rgb(1, 0, 19);
-    color: rgb(255, 255, 255);
-    padding: 1rem;
-}
-
-
-.logo-col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #291700), linear-gradient(135deg, #f57c00, #ff9800);
+    color: #fff;
+    padding: 20px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 footer div {
@@ -276,17 +277,12 @@ footer a {
     color: white;
 }
 
-.bold {
-    font-weight: bolder;
+footer h5 {
+    margin-top: 0;
 }
 
-
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+footer p {
+    margin-bottom: 0;
 }
 
 
@@ -355,67 +351,25 @@ button.dark-mode-toggle {
     justify-content: center;
     align-items: center;
     margin-left: 1rem;
-    outline: none; /* Remove default focus outline */
+    outline: none; 
 }
 
 button.dark-mode-toggle:focus {
-    box-shadow: none; /* Remove default focus box-shadow */
+    box-shadow: none; 
 }
 
 button.dark-mode-toggle:hover {
-    background-color: rgb(228, 228, 228);
-    color: black;
+    background-color: #a04000;
+    color: white;
     border: 1px solid black;
 }
 
-/* To prevent blue flash on click */
+
 button.dark-mode-toggle:active {
-    background-color: black; /* Match the normal background color */
-    color: white; /* Match the normal text color */
-    /* border: 1px solid white; Match the normal border color */
+    background-color: black; 
+    color: white; 
+
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-.text-justify {
-    text-align: justify;
-}
-
-.btn-primary {
-    background-color: #a04000;
-
-    color: white;
-    border: #000000;
-}
-
-.btn-primary:hover {
-    background-color: rgb(233, 74, 0);
-    color: white;
-    /*  border: #000000; */
-}
-
-
-footer {
-    background: linear-gradient(135deg, #1a1a1a, #3e3e3e), linear-gradient(135deg, #f57c00, #ff9800);
-    color: #fff;
-    padding: 20px;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
-}
-
-footer h5 {
-    margin-top: 0;
-}
-
-footer p {
-    margin-bottom: 0;
-}
