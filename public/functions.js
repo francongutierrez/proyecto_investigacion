@@ -1,9 +1,9 @@
-// Modo oscuro y almacenamiento en localStorage
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButtons = document.querySelectorAll(".dark-mode-toggle");
     const body = document.body;
     const navbar = document.querySelector(".navbar");
     const navlinks = document.querySelectorAll(".nav-link");
+    const cards = document.querySelectorAll(".card");
 
     toggleButtons.forEach(button => {
         button.addEventListener("click", function() {
@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
             navbar.classList.toggle("dark-mode");
             navlinks.forEach(function(navlink) {
                 navlink.classList.toggle("dark-mode");
+            });
+            cards.forEach(function(card) {
+                card.classList.toggle("dark-mode");
             });
 
             // Guardar la preferencia del usuario en localStorage
@@ -29,9 +32,11 @@ document.addEventListener("DOMContentLoaded", function() {
         navlinks.forEach(function(navlink) {
             navlink.classList.add("dark-mode");
         });
+        cards.forEach(function(card) {
+            card.classList.add("dark-mode");
+        });
     }
 });
-
 
 document.querySelectorAll('.dark-mode-toggle').forEach(button => {
     button.addEventListener('click', function() {
@@ -52,6 +57,23 @@ document.querySelectorAll('.dark-mode-toggle').forEach(button => {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const observerOptions = {
+        threshold: 0.1
+    };
 
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__animated', 'animate__fadeInDown');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
 
+    const h2s = document.querySelectorAll('h2.animated');
+    h2s.forEach(h2 => {
+        observer.observe(h2);
+    });
+});
 
